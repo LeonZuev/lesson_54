@@ -6,6 +6,7 @@ public class ReverseNumbers {
   public static void main(String[] args) {
     long n = 1234567890L;
     int[] reversedDigits = reverseDigits(n);
+    System.out.printf("long n = %d\n",n);
     System.out.println(Arrays.toString(reversedDigits));
   }
 
