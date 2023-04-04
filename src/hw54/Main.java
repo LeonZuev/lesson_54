@@ -1,3 +1,5 @@
+package hw54;
+
 import java.util.Arrays;
 
 public class Main {
@@ -21,8 +23,8 @@ public class Main {
 
 
     String phoneNumber = "1234567890";
-    int[] digits = digitize(Long.parseLong(phoneNumber));
-    System.out.println(createPhoneNumber(digits));
+    int[] digits = (Long.parseLong(phoneNumber);
+    System.out.println(createPhoneNumber(String));
   }
   }
 
