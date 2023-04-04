@@ -22,11 +22,13 @@ public class Main {
     System.out.println(needleFound);
 
 
-    String phoneNumber = "1234567890";
-    int[] digits = (Long.parseLong(phoneNumber);
-    System.out.println(createPhoneNumber(String));
+/*    String phoneNumber = "1234567890";
+    long digits = (Long.parseLong(phoneNumber));
+    String String;
+    String = null;
+    System.out.println(createPhoneNumber(String));*/
   }
-  }
+
 
   public static int[] reverseDigits(long n) {
     return new StringBuilder(String.valueOf(n))
@@ -51,7 +53,7 @@ public class Main {
     return String.format("found the needle at position %d", Arrays.asList(haystack).indexOf("needle"));
   }
 
-  public static String createPhoneNumber(final String n) {
+/*  public static String createPhoneNumber(final String n) {
     return "("+n[0]+n[1]+n[2]+") "+n[3]+n[4]+n[5]+"-"+n[6]+n[7]+n[8]+n[9];
-  }
+  }*/
 }
