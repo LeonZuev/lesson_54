@@ -29,17 +29,22 @@ public class EvenIndexMin {
   }
 
   public static void search(List<Integer> numbers) {
-    boolean evenNumber = false;
+    Integer minEvenNumber = null;
     for (int number : numbers) {
-      if (number % 2 == 0) {
-        System.out.println(number);
-        evenNumber = true;
+      if (number % 2 == 0 && (minEvenNumber == null || number < minEvenNumber)) {
+        minEvenNumber = number;
       }
     }
-    if (!evenNumber) {
-      System.out.println("-1");
+
+      if (minEvenNumber != null) {
+        System.out.println(minEvenNumber);
+      }
+      else {
+        System.out.println("-1");
+      }
     }
   }
-}
+
+
 
 
