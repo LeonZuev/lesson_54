@@ -17,7 +17,7 @@ public class EvenIndexMin {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    System.out.println("Ведите последовательность чисел:");
+    System.out.println("Ведите последовательность чисел через пробел:");
     String[] input = br.readLine().split(" ");
     List<Integer> numbers = new ArrayList<>();
 
@@ -25,16 +25,21 @@ public class EvenIndexMin {
       numbers.add(Integer.parseInt(number));
     }
 
-    System.out.println(search(numbers));
+    search(numbers);
   }
 
-  public static int search(List<Integer> numbers) {
+  public static void search(List<Integer> numbers) {
+    boolean evenNumber = false;
     for (int number : numbers) {
       if (number % 2 == 0) {
         System.out.println(number);
+        evenNumber = true;
       }
     }
-    return -1;
+    if (!evenNumber) {
+      System.out.println("-1");
+    }
   }
 }
+
 
