@@ -13,6 +13,15 @@ import java.util.List;
   не понял, откуда брать саму последовательность
    */
 
+/**
+ * @Сложности:
+ * @Временная O(n)
+ * Алгоритм проходит по каждому элементу списка 1 раз,
+ *  n = количеству элементов в списке
+ * @Пространственная O(n)
+ * кол-во памяти пропорционально кол-ву данных
+ */
+
 public class EvenIndexMin {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,17 +31,17 @@ public class EvenIndexMin {
     List<Integer> numbers = new ArrayList<>();
 
     for (String number : input) {
-      numbers.add(Integer.parseInt(number));
+      numbers.add(Integer.parseInt(number)); // O(n)
     }
 
     search(numbers);
   }
 
   public static void search(List<Integer> numbers) {
-    Integer minEvenNumber = null;
+    Integer minEvenNumber = null; // O(n)
     for (int number : numbers) {
       if (number % 2 == 0 && (minEvenNumber == null || number < minEvenNumber)) {
-        minEvenNumber = number;
+        minEvenNumber = number; // O(n)
       }
     }
 
