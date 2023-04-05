@@ -12,10 +12,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @Сложности:
+ * Сложности:
+ *
  * @Временная O(n)
  * Алгоритм проходит по каждому элементу 2 раза:
  * для поиска максимума и для поиска минимума(n2).
+ * 2 - не влияет на функцию.
  * (n^2) - если бы циклы были вложенные.
  *  (n) = количество слов в массиве
  *
@@ -23,8 +25,8 @@ import java.io.InputStreamReader;
  * кол-во памяти пропорционально кол-ву данных.
  * (n^2) - при использовании двумерного массива.
  */
-
 public class ShortWordSearch {
+
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -41,6 +43,16 @@ public class ShortWordSearch {
     Вывести все самые короткие слова через пробел:
      -найти самое короткое слово:
        -вывести слова с его длинной.
+     */
+    /**
+     * Поиск коротких слов
+     *
+     * @param wordList список слов
+     * @param minLength переменная для поиска букв в слове
+     * @param MAX_VALUE максимальная константа для начала поиска букв
+     * @minEvenNumber  минимальное чётное число в последовательности
+     * @number временная переменная для перебора массива и вывода результата
+     * @return индекс или -1, если число не найдено
      */
     int minLength = Integer.MAX_VALUE;//начинаем поиск от максимума
     for (String word : wordList) {

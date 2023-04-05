@@ -14,7 +14,7 @@ import java.util.List;
    */
 
 /**
- * @Сложности:
+ * Сложности:
  * @Временная O(n)
  * Алгоритм проходит по каждому элементу списка 1 раз,
  *  (n) = количеству элементов в списке
@@ -36,7 +36,14 @@ public class EvenIndexMin {
 
     search(numbers);
   }
-
+  /**
+   * Поиск минимального чётного числа
+   *
+   * @param numbers список чисел
+   * @minEvenNumber  минимальное чётное число в последовательности
+   * @number временная переменная для перебора массива и вывода результата
+   * @return индекс или -1, если число не найдено
+   */
   public static void search(List<Integer> numbers) {
     Integer minEvenNumber = null; // O(n)
     for (int number : numbers) {
@@ -46,6 +53,7 @@ public class EvenIndexMin {
     }
 
       if (minEvenNumber != null) {
+        System.out.println("Минимальное чётное число в последовательности:");
         System.out.println(minEvenNumber);
       }
       else {
