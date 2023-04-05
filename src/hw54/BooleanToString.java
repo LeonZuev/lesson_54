@@ -11,6 +11,7 @@ public class BooleanToString {
     /*return b ? "true" : "false";*/
     /*return String.valueOf(b);*/
     /*return b+"";*/
+    /*return (b==true)?"true":"false";*/
   }
 
  /* public static String convert(boolean value){
