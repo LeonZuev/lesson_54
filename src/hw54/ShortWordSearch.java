@@ -11,6 +11,19 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * @Сложности:
+ * @Временная O(n)
+ * Алгоритм проходит по каждому элементу 2 раза:
+ * для поиска максимума и для поиска минимума(n2).
+ * (n^2) - если бы циклы были вложенные.
+ *  n = количество слов в массиве
+ *
+ * @Пространственная O(n)
+ * кол-во памяти пропорционально кол-ву данных.
+ * (n^2) - при использовании двумерного массива.
+ */
+
 public class ShortWordSearch {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
