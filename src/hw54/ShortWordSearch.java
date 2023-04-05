@@ -24,8 +24,25 @@ public class ShortWordSearch {
     for (i = 0; i < num; ++i) {
       wordList[i] = br.readLine();
     }
+    /*
+    Вывести все самые короткие слова через пробел:
+     -найти самое короткое слово:
+       -вывести слова с его длинной.
+     */
+    int minLength = Integer.MAX_VALUE;//начинаем поиск от максимума
     for (String word : wordList) {
-      System.out.println(word);
+      if (word.length() < minLength) {
+        minLength = word.length();
+      }
     }
+
+    System.out.println("Самые короткие слова:");
+    System.out.print("");
+    for (String word : wordList) {
+      if (word.length() == minLength) {
+        System.out.print(word + " ");
+      }
+    }
+    System.out.println();
   }
 }
